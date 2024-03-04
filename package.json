@@ -1,0 +1,19 @@
+{
+  "name": "testing-practice",
+  "version": "1.0.0",
+  "description": "A TOP Project to understand writing tests with jest.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}
