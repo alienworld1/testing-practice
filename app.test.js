@@ -43,3 +43,24 @@ test('calculator multiply(3, 4) gives 12', () => (
 test('calculator.divide(12, 4) gives 3', () => (
     expect(calculator.divide(12, 4)).toBe(3)
 ));
+
+test('caesar cipher: single letter shift', () => (
+    expect(caesarCipher('abcd', 1)).toBe('bcde')
+));
+
+test('caesar cipher: multiple letter shift', () => {
+    expect(caesarCipher('abcd', 3)).toBe('defg');
+    expect(caesarCipher('abcd', 5)).toBe('fghi');
+});
+
+test('caesar cipher: cycling from z to a', () => (
+    expect(caesarCipher('xyz', 2)).toBe('zab')
+));
+
+test('caesar cipher: keeps the same case', () => (
+    expect(caesarCipher('AbCd', 1)).toBe('BcDe')
+));
+
+test('caesar cipher: punctuation', () => (
+    expect(caesarCipher('abc? d!', 2)).toBe('cde? f!')
+));
