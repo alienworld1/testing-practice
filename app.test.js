@@ -2,6 +2,7 @@ import {
     capitalize,
     reverseString,
     calculator,
+    caesarCipher,
 } from './app';
 
 test('capitalize object to Object', () => (
