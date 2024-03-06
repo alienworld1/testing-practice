@@ -3,6 +3,7 @@ import {
     reverseString,
     calculator,
     caesarCipher,
+    analyzeArray,
 } from './app';
 
 test('capitalize object to Object', () => (
@@ -64,4 +65,13 @@ test('caesar cipher: keeps the same case', () => (
 
 test('caesar cipher: punctuation', () => (
     expect(caesarCipher('abc? d!', 2)).toBe('cde? f!')
+));
+
+test('analyzeArray: correct average, min, max and length', () => (
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6,
+    })
 ));

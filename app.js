@@ -38,9 +38,21 @@ const caesarCipher = (string, shift) => {
     return encryptedText;
 }
 
+const averageOfArray = array => array.reduce((prev, current) => prev + current, 0)/array.length;
+const minOfArray = array => Math.min(...array);
+const maxOfArray = array => Math.max(...array);
+
+const analyzeArray = array => ({
+    average: averageOfArray(array),
+    min: minOfArray(array),
+    max: maxOfArray(array),
+    length: array.length,
+});
+
 export {
     capitalize,
     reverseString,
     calculator,
     caesarCipher,
+    analyzeArray,
 };
