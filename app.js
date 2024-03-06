@@ -15,8 +15,32 @@ const calculator = {
     divide: (a, b) => a / b,
 }
 
+const isUpperCase = string => /^[A-Z]+$/.test(string); 
+const isAlphabet = string => /^[a-zA-Z]$/.test(string);
+
+const caesarCipher = (string, shift) => {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    let encryptedText = '';
+
+    for (const letter of string) {
+        if (!isAlphabet(letter)) {
+            encryptedText = encryptedText.concat(letter);
+            continue;
+        };
+
+        const index = alphabet.indexOf(letter.toLowerCase());
+        const newIndex = (index + shift) % 26;
+
+        const shiftedLetter = alphabet.charAt(newIndex)
+        encryptedText = encryptedText.concat(isUpperCase(letter)? shiftedLetter.toUpperCase(): shiftedLetter); 
+    }
+
+    return encryptedText;
+}
+
 export {
     capitalize,
     reverseString,
     calculator,
+    caesarCipher,
 };
